@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HappyBaby</string>
+    <string name="login_username">User Name</string>
+    <string name="login_request">PLEASE LOGIN</string>
+    <string name="login_password">Password</string>
+    <string name="app_login_button">LOGIN</string>login_wrong_input
+    <string name="login_wrong_input">Bad username or password</string>
+
+    <string name="main_edit_button">EDIT</string>
+    <string name="main_delete_button">DELETE</string>
+    <string name="main_add_button">ADD</string>
+
+    <string name="popup_edit_age">ENTER AGE</string>
+    <string name="popup_edit_height">ENTER HEIGHT</string>
+    <string name="popup_edit_weight">ENTER WEIGHT</string>
+    <string name="popup_save_button">SAVE</string>
+
+
+
+
+</resources>
