@@ -3,7 +3,7 @@
     android:id="@+id/popup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/background" >
+    android:background="@color/design_default_color_primary_dark" >
 
     <EditText
         android:id="@+id/edit_age"

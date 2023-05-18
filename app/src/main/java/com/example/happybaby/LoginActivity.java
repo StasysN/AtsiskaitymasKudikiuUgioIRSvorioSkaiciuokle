@@ -11,39 +11,41 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
+EditText username, password;
+Button btnlogin;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        EditText username = findViewById(R.id.username);
-        EditText password = findViewById(R.id.password);
-        Button login = findViewById(R.id.login_button);
+        username = (EditText)  findViewById(R.id.username1);
+        password = (EditText) findViewById(R.id.password1);
+        btnlogin = (Button) findViewById(R.id.btsignin1);
+        DBHelper DB = new DBHelper(this);
 
-        login.setOnClickListener(new View.OnClickListener() {
+        btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                username.setError(null);
-                password.setError(null);
-                if (Validation.isUsernameValid(username.getText().toString())) {
-                    if (Validation.isPasswordValid(password.getText().toString())) {
-                        Intent goToMainActivity = new Intent(LoginActivity.this,
-                                MainActivity.class);
-                        startActivity(goToMainActivity);
 
-                    } else {
-                        password.setError(getResources().getString(R.string.login_wrong_input));
-                        password.requestFocus();
-                    }
-                } else {
-                    username.setError(getResources().getString(R.string.login_wrong_input));
-                    username.requestFocus();
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
+
+                if(user.equals("")||pass.equals("")){
+                    Toast.makeText(LoginActivity.this, "Pleaese fill the fields", Toast.LENGTH_SHORT).show();
+                }else {
+                    Boolean checkuserpass = DB.checkuserNamePassword(user, pass);
+                    if(checkuserpass==true) {
+                        Toast.makeText(LoginActivity.this, "Signin successfull", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+
+                    }else {Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();}
                 }
-            }
 
+            }
         });
 
-
     }
-
 }

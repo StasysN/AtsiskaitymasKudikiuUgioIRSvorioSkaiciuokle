@@ -114,7 +114,7 @@ public class CustomMeasurementsList extends BaseAdapter {
         LayoutInflater layoutInflater = context.getLayoutInflater();
         View layout = layoutInflater.inflate(R.layout.edit_popup,
                 (ViewGroup) context.findViewById(R.id.popup));
-        popup = new PopupWindow(layout, 600, 670, true);
+        popup = new PopupWindow(layout, 600, 800, true);
         popup.showAtLocation(layout, Gravity.CENTER, 0, 0);
 
         final EditText age = layout.findViewById(R.id.edit_age);
