@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_admin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+
+    <EditText
+        android:id="@+id/admin_edit_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:hint="@string/admin_edit_username"/>
+
+    <EditText
+        android:id="@+id/admin_edit_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/admin_edit_username"
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:hint="@string/admin_edit_password"/>
+
+    <Button
+        android:id="@+id/save_user"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/admin_edit_password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="SAVE"/>
+
+</RelativeLayout>

@@ -16,5 +16,10 @@
     <string name="popup_edit_weight">ENTER WEIGHT</string>
     <string name="popup_save_button">SAVE</string>
 
+    <string name="admin_saveNewUser_button">SAVE NEW USER</string>
+    <string name="admin_edit_username">ENTER USERNAME</string>
+    <string name="admin_edit_password">ENTER PASSWORD</string>
+    <string name="admin_edit_id">ENTER ID</string>
+    <string name="create_new_user">CREATE NEW USER</string>
 
 </resources>

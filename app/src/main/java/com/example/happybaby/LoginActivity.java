@@ -20,9 +20,9 @@ Button btnlogin;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username = (EditText)  findViewById(R.id.username1);
-        password = (EditText) findViewById(R.id.password1);
-        btnlogin = (Button) findViewById(R.id.btsignin1);
+        username = (EditText)  findViewById(R.id.username);
+        password = (EditText) findViewById(R.id.password);
+        btnlogin = (Button) findViewById(R.id.btnlogin);
         DBHelper DB = new DBHelper(this);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +35,7 @@ Button btnlogin;
                 if(user.equals("")||pass.equals("")){
                     Toast.makeText(LoginActivity.this, "Pleaese fill the fields", Toast.LENGTH_SHORT).show();
                 }else {
-                    Boolean checkuserpass = DB.checkuserNamePassword(user, pass);
+                    Boolean checkuserpass = DB.checkUsernamePassword(user, pass);
                     if(checkuserpass==true) {
                         Toast.makeText(LoginActivity.this, "Signin successfull", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);

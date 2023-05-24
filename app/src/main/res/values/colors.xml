@@ -3,4 +3,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background">#ADF1AF</color>
+    <color name="row_button">#2196F3</color>
 </resources>

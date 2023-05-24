@@ -22,11 +22,13 @@ public class CustomMeasurementsList extends BaseAdapter {
     private PopupWindow popup;
 
     private BabyDAO measurementsDAO;
+    public CustomMeasurementsList() {
+    }
 
-    public CustomMeasurementsList(Activity context, ArrayList<Baby> measurements, BabyDAO measurementsDAO) {
+    public CustomMeasurementsList(Activity context, ArrayList<Baby> measurements, BabyDAO measurementDAO) {
         this.context = context;
         this.measurements = measurements;
-        this.measurementsDAO = measurementsDAO;
+        this.measurementsDAO = measurementDAO;
     }
     public void setMeasurements(ArrayList<Baby> measurements) {
         this.measurements = measurements;
@@ -72,10 +74,10 @@ public class CustomMeasurementsList extends BaseAdapter {
             holder.textViewAge = row.findViewById(R.id.age);
             holder.textViewHeight = row.findViewById(R.id.height);
             holder.textViewWeight = row.findViewById(R.id.weight);
-            holder.textViewHeightAverage = row.findViewById(R.id.height_average);
-            holder.textViewWeightAverage = row.findViewById(R.id.weight_average);
-            holder.editButton = row.findViewById(R.id.edit_button);
-            holder.deleteButton = row.findViewById(R.id.delete_button);
+            /*holder.textViewHeightAverage = row.findViewById(R.id.height_average);
+            holder.textViewWeightAverage = row.findViewById(R.id.weight_average);*/
+            holder.editButton = row.findViewById(R.id.edit_measurement_button);
+            holder.deleteButton = row.findViewById(R.id.delete_measurement_button);
 
             row.setTag(holder);
         } else {
@@ -86,15 +88,15 @@ public class CustomMeasurementsList extends BaseAdapter {
         holder.textViewAge.setText("" + measurements.get(position).getBabyAge());
         holder.textViewHeight.setText("" + measurements.get(position).getBabyHeight());
         holder.textViewWeight.setText("" + measurements.get(position).getBabyWeight());
-        holder.textViewHeightAverage.setText(measurements.get(position).getBabyHeightAverage());
-        holder.textViewWeightAverage.setText(measurements.get(position).getBabyWeightAverage());
+        /*holder.textViewHeightAverage.setText(measurements.get(position).getBabyHeightAverage());
+        holder.textViewWeightAverage.setText(measurements.get(position).getBabyWeightAverage());*/
 
         final int positionPopup = position;
 
         holder.editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editPopup(positionPopup);
+                editPopupMeasurements(positionPopup);
             }
         });
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
@@ -110,9 +112,9 @@ public class CustomMeasurementsList extends BaseAdapter {
         return row;
     }
 
-    private void editPopup(final int positionPopup) {
+    private void editPopupMeasurements(final int positionPopup) {
         LayoutInflater layoutInflater = context.getLayoutInflater();
-        View layout = layoutInflater.inflate(R.layout.edit_popup,
+        View layout = layoutInflater.inflate(R.layout.edit_popup_main,
                 (ViewGroup) context.findViewById(R.id.popup));
         popup = new PopupWindow(layout, 600, 800, true);
         popup.showAtLocation(layout, Gravity.CENTER, 0, 0);

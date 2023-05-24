@@ -8,14 +8,15 @@
     tools:context=".MainActivity"
     android:background="@drawable/ic_launcher_background">
 
+
     <TextView
         android:layout_width="204dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="73dp"
         android:text="Please chose gender"
         android:textSize="20sp" />
 
@@ -25,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
         android:text="Boy" />
 
     <Button
@@ -35,94 +36,27 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="10dp"
         android:text="Girl" />
 
     <Button
         android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="325dp"
+       android:layout_marginTop="30dp"
         android:text="@string/main_add_button" />
-
-    <EditText
-        android:id="@+id/height"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="222dp"
-        android:ems="10"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="139dp"
-        android:layout_marginTop="303dp"
-        android:ems="10"
-        android:inputType="number" />
-
-
-    <EditText
-        android:id="@+id/age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="154dp"
-        android:layout_marginEnd="63dp"
-        android:ems="10"
-        android:inputType="number" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="316dp"
-        android:text="Weight in kg," />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="165dp"
-        android:text="Age in months," />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="242dp"
-        android:text="Height in cm," />
 
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/weight"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="84dp" />
-
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="0dp" />
 
 
 </RelativeLayout>
